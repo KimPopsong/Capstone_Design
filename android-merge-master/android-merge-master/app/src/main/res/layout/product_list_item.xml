@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/round_background2"
+            android:contentDescription="@string/description_product_image"
+            android:padding="12dp"
+            tools:srcCompat="@drawable/ic_baseline_image_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_vertical"
+                android:textColor="@color/state_pressed1"
+                android:textSize="14sp"
+                tools:text="resultItemText" />
+
+            <TextView
+                android:id="@+id/productNameTranslated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_vertical"
+                android:textColor="@color/state_pressed1"
+                android:textSize="14sp"
+                tools:text="resultItemText" />
+
+            <TextView
+                android:id="@+id/productManufacturer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:textColor="@color/state_pressed1"
+                android:textSize="12sp"
+                tools:text="resultManufacturerText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Languages to Translate-->
+    <string-array name="languages">
+        <item>한국어</item>
+        <item>English</item>
+        <item>Tiếng Việt</item>
+        <item>中文</item>
+        <item>O\'zbekcha</item>
+        <item>ภาษาไทย</item>
+        <item>Tagalog</item>
+        <item>日本語</item>
+        <item>Español</item>
+        <item>हिन्दी</item>
+    </string-array>
+
+    <!-- Language IDs to Translate-->
+    <string-array name="languages_values">
+        <item>ko</item>
+        <item>en</item>
+        <item>vi</item>
+        <item>zh</item>
+        <item>uz</item>
+        <item>th</item>
+        <item>tl</item>
+        <item>ja</item>
+        <item>es</item>
+        <item>hi</item>
+    </string-array>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.merge.writereview.WriteReviewViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".writereview.WriteReviewActivity">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/write_review_title"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray_1"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- layout width는 무조건 wrap content-->
+
+
+            <RatingBar
+                android:id="@+id/reviewRatingBar"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="@{vm.ratingField}"
+                android:stepSize="1"
+                app:OnRatingBarChangeListener="@{vm.scoreChangeListener}" />
+
+            <EditText
+                android:id="@+id/reviewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="20dp"
+                android:autofillHints="@null"
+                android:background="@drawable/square_edittext1"
+                android:ems="10"
+                android:hint="@string/review_title"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:text="@={vm.titleField}"
+                android:textColor="@color/dark_gray_1" />
+
+            <EditText
+                android:id="@+id/mp_searchfield"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:autofillHints="@null"
+                android:background="@drawable/square_edittext1"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/write_review_title"
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:text="@={vm.contentsField}"
+                android:textColor="@color/dark_gray_1" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_button2"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                android:gravity="center"
+                android:onClick="@{() -> vm.writeReview()}"
+                android:paddingHorizontal="20dp"
+                android:text="Write"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

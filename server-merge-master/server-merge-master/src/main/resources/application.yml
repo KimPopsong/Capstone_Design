@@ -1,0 +1,39 @@
+spring:
+  security:
+    user:
+      #name: juhwan
+      name: dsKim
+      password: 1234
+
+  # mySQL
+  datasource:
+    # url: jdbc:mysql://[서버 url]/[DB 스키마]?serverTimezone=UTC&characterEncoding=UTF-8
+    # url: jdbc:mysql://localhost:8080/mydb?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/capstone
+    username: root
+    password: eotjd537
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # H2 DB
+  #datasource:
+  #  url: jdbc:h2:tcp://localhost/~/test
+  #  username: sa
+  #  password:
+  #  driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # create, update, none
+    properties:
+      hibernate:
+        #      default_batch_fetch_size: 1000
+        #      show_sql: true
+        format_sql: true
+      open-in-view: false
+
+  jwt:
+    secret: inu-appcenter
+
+logging:
+  level:
+    org.hibernate.SQL: info  # info 미만(debug같은거)은 무시한다! info 이상만 출력하능겨 -> log level

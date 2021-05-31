@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.merge.camera.CameraViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_select_category"
+                android:textColor="@color/dark_gray_1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="224dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@android:style/Widget.Material.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_button3"
+                    android:button="@drawable/tab_selector1"
+                    android:buttonTint="#00FFFFFF"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingEnd="5dp"
+                    android:text="@string/text_category1"
+                    android:textColor="@color/state_checked1"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    style="@android:style/Widget.Material.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_button3"
+                    android:button="@drawable/tab_selector1"
+                    android:buttonTint="#00FFFFFF"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingEnd="5dp"
+                    android:text="@string/text_category2"
+                    android:textColor="@color/state_checked1"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    style="@android:style/Widget.Material.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_button3"
+                    android:button="@drawable/tab_selector1"
+                    android:buttonTint="#00FFFFFF"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingEnd="5dp"
+                    android:text="@string/text_category3"
+                    android:textColor="@color/state_checked1"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    style="@android:style/Widget.Material.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_button3"
+                    android:button="@drawable/tab_selector1"
+                    android:buttonTint="#00FFFFFF"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingEnd="5dp"
+                    android:text="@string/text_category4"
+                    android:textColor="@color/state_checked1"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    style="@android:style/Widget.Material.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_button3"
+                    android:button="@drawable/tab_selector1"
+                    android:buttonTint="#00FFFFFF"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingEnd="5dp"
+                    android:text="@string/text_category5"
+                    android:textColor="@color/state_checked1"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+
+                android:id="@+id/startDetectionButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/round_button2"
+                android:gravity="center"
+                android:text="@string/button_start_detection"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
