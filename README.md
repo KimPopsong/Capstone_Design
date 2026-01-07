@@ -1,15 +1,3 @@
----
-title: "머지?"
-pubDate: 2021-05-25T00:00+09:00
-startDate: 2020-10-01
-endDate: 2021-05-25
-description: "다양한 언어권의 사용자를 위한 상품 인식 애플리케이션"
-thumbnail: '../../assets/projects/MERGE/MERGE_Hero.png'
-heroImage: '../../assets/projects/MERGE/MERGE_Hero.png'
-gitHub: "https://github.com/KimPopsong/Capstone_Design"
-teamSize: "2명"
-tags: ["Spring Boot", "Android", "TensorFlow Lite"]
----
 ## [개요]
 
 식품 인식 및 영양 정보 제공을 위한 통합 플랫폼으로, Android 모바일 애플리케이션과 Spring Boot 기반 백엔드 서버, TensorFlow Lite를 활용한 온디바이스 머신러닝으로 구성된 풀스택 애플리케이션입니다. 사용자는 카메라를 통해 식품을 촬영하면 실시간으로 제품을 인식하고, 상세한 영양 정보와 리뷰를 확인할 수 있습니다.
