@@ -1,3 +1,15 @@
+---
+title: "머지?"
+pubDate: 2021-05-25T00:00+09:00
+startDate: 2020-10-01
+endDate: 2021-05-25
+description: "다양한 언어권의 사용자를 위한 상품 인식 애플리케이션"
+thumbnail: '../../assets/projects/MERGE/MERGE_Hero.png'
+heroImage: '../../assets/projects/MERGE/MERGE_Hero.png'
+gitHub: "https://github.com/KimPopsong/Capstone_Design"
+teamSize: "2명"
+tags: ["Spring Boot", "Android", "TensorFlow Lite"]
+---
 ## [개요]
 
 식품 인식 및 영양 정보 제공을 위한 통합 플랫폼으로, Android 모바일 애플리케이션과 Spring Boot 기반 백엔드 서버, TensorFlow Lite를 활용한 온디바이스 머신러닝으로 구성된 풀스택 애플리케이션입니다. 사용자는 카메라를 통해 식품을 촬영하면 실시간으로 제품을 인식하고, 상세한 영양 정보와 리뷰를 확인할 수 있습니다.
@@ -23,23 +35,27 @@
     - 언어 : Kotlin (1.5.0-RC), Java
     - 최소 SDK : 26 (Android 8.0)
     - 타겟 SDK : 30 (Android 11)
-    - UI 프레임워크      - Android SDK
-      - Material Design Components
-      - Data Binding
-    - 네트워킹      - Retrofit (2.9.0): RESTful API 통신
-      - PersistentCookieJar: 세션 쿠키 관리
+    - UI 프레임워크
+        - Android SDK
+        - Material Design Components
+        - Data Binding
+    - 네트워킹
+        - Retrofit (2.9.0): RESTful API 통신
+        - PersistentCookieJar: 세션 쿠키 관리
     - 이미지 처리 : Glide (4.11.0): 이미지 로딩 및 캐싱
-    - 번역      - Google Cloud Translate API: 실시간 번역 기능
-      - Apache Commons Text: HTML 이스케이프/언이스케이프 처리
+    - 번역
+        - Google Cloud Translate API: 실시간 번역 기능
+        - Apache Commons Text: HTML 이스케이프/언이스케이프 처리
     - 지역화 : Akexorcist Localization Library: 다국어 지원
     - 라이프사이클 : Lifecycle ViewModel, LiveData
 - ML
     - 프레임워크 : TensorFlow Lite (2.4.0)
-    - 모델      - ramen.tflite (라면 분류)
-      - snack.tflite (과자 분류)
-      - drink.tflite (음료 분류)
-      - dairy.tflite (유제품 분류)
-      - icecream.tflite (아이스크림 분류)
+    - 모델
+        - ramen.tflite (라면 분류)
+        - snack.tflite (과자 분류)
+        - drink.tflite (음료 분류)
+        - dairy.tflite (유제품 분류)
+        - icecream.tflite (아이스크림 분류)
     - 추론 환경 : Android 온디바이스 추론
     - 입력 크기 : 640x640 픽셀
     - 출력 : Object Detection (위치, 클래스, 점수)
@@ -47,40 +63,50 @@
 ## [주요 담당 기능]
 
 - BE
-    - 사용자 인증      - JWT 기반 인증 시스템 구현
-      - Spring Security를 활용한 보안 설정
-      - 쿠키 기반 토큰 전달로 클라이언트-서버 통신 보안 강화
-      - 토큰 유효기간 관리 (1시간)
-    - 제품 관리      - 제품 정보 CRUD 기능
-      - 제품 중복 검증 로직
-      - 제품 검색 기능 (ID, 이름 기반)
-      - 영양 정보 관리 (칼로리, 탄수화물, 단백질, 지방 등)
-    - 리뷰 관리      - 리뷰 작성, 수정, 조회 기능
-      - 제품별 리뷰 조회
-      - 회원-리뷰 연관관계 관리
-    - 예외 처리      - 전역 예외 처리 핸들러 구현
-      - 도메인별 커스텀 예외 클래스 (MemberException, ProductException, ReviewException)
-      - 일관된 에러 응답 형식 제공
-    - API 설계      - RESTful API 원칙 준수
-      - DTO를 통한 요청/응답 데이터 구조화
-      - HTTP 상태 코드 적절한 활용
+    - 사용자 인증
+        - JWT 기반 인증 시스템 구현
+        - Spring Security를 활용한 보안 설정
+        - 쿠키 기반 토큰 전달로 클라이언트-서버 통신 보안 강화
+        - 토큰 유효기간 관리 (1시간)
+    - 제품 관리
+        - 제품 정보 CRUD 기능
+        - 제품 중복 검증 로직
+        - 제품 검색 기능 (ID, 이름 기반)
+        - 영양 정보 관리 (칼로리, 탄수화물, 단백질, 지방 등)
+    - 리뷰 관리
+        - 리뷰 작성, 수정, 조회 기능
+        - 제품별 리뷰 조회
+        - 회원-리뷰 연관관계 관리
+    - 예외 처리
+        - 전역 예외 처리 핸들러 구현
+        - 도메인별 커스텀 예외 클래스 (MemberException, ProductException, ReviewException)
+        - 일관된 에러 응답 형식 제공
+    - API 설계
+        - RESTful API 원칙 준수
+        - DTO를 통한 요청/응답 데이터 구조화
+        - HTTP 상태 코드 적절한 활용
 - FE (Android)
-    - 사용자 인증      - 로그인/회원가입 기능
-      - 자동 로그인 기능 (AutoLogin)
-      - JWT 기반 세션 관리
-    - 제품 관리      - 제품 목록 조회
-      - 제품 상세 정보 표시 (영양 정보 포함)
-      - 제품 검색 기능
-      - Fragment를 활용한 제품 정보/리뷰 탭 구성
-    - 리뷰 기능      - 리뷰 작성 및 수정
-      - 제품별 리뷰 목록 조회
-      - RecyclerView를 활용한 리뷰 리스트 표시
-    - 다국어 지원      - 11개 언어 지원 (한국어, 영어, 일본어, 중국어, 스페인어, 힌디어, 태국어, 베트남어, 필리핀어, 우즈베크어)
-      - Google Cloud Translate API를 통한 실시간 번역
-      - 지역화된 문자열 리소스 관리
-    - 네트워크 통신      - Retrofit을 활용한 RESTful API 통신
-      - ViewModel과 LiveData를 활용한 비동기 데이터 처리
-      - 에러 핸들링 및 사용자 피드백 제공
+    - 사용자 인증
+        - 로그인/회원가입 기능
+        - 자동 로그인 기능 (AutoLogin)
+        - JWT 기반 세션 관리
+    - 제품 관리
+        - 제품 목록 조회
+        - 제품 상세 정보 표시 (영양 정보 포함)
+        - 제품 검색 기능
+        - Fragment를 활용한 제품 정보/리뷰 탭 구성
+    - 리뷰 기능
+        - 리뷰 작성 및 수정
+        - 제품별 리뷰 목록 조회
+        - RecyclerView를 활용한 리뷰 리스트 표시
+    - 다국어 지원
+        - 11개 언어 지원 (한국어, 영어, 일본어, 중국어, 스페인어, 힌디어, 태국어, 베트남어, 필리핀어, 우즈베크어)
+        - Google Cloud Translate API를 통한 실시간 번역
+        - 지역화된 문자열 리소스 관리
+    - 네트워크 통신
+        - Retrofit을 활용한 RESTful API 통신
+        - ViewModel과 LiveData를 활용한 비동기 데이터 처리
+        - 에러 핸들링 및 사용자 피드백 제공
 
 ## [트러블슈팅 & 문제 해결]
 - BE
@@ -107,12 +133,17 @@
 - 실시간 번역 : Google Cloud Translate API를 활용한 동적 콘텐츠 번역
 
 ## [주요 화면]
-- 로그인/회원가입  - 간편한 사용자 인증 인터페이스
-- 카메라 제품 인식  - 카테고리 선택 후 카메라 촬영
-  - 실시간 ML 추론 결과 표시
-- 제품 목록  - 검색 기능이 포함된 제품 리스트
-- 제품 상세 정보  - 영양 정보 및 리뷰 탭 구성
-- 리뷰 작성/수정  - 사용자 친화적인 리뷰 작성 인터페이스
+- 로그인/회원가입
+    - 간편한 사용자 인증 인터페이스
+- 카메라 제품 인식
+    - 카테고리 선택 후 카메라 촬영
+    - 실시간 ML 추론 결과 표시
+- 제품 목록
+  - 검색 기능이 포함된 제품 리스트
+- 제품 상세 정보
+  - 영양 정보 및 리뷰 탭 구성
+- 리뷰 작성/수정
+  - 사용자 친화적인 리뷰 작성 인터페이스
 
 ## [아키텍처 구조]
 
